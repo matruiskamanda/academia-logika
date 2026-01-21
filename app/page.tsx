@@ -109,7 +109,7 @@ export default function Home() {
             </div>
           </div>
           <a
-            href="https://wa.me/9999075334?text=Hola,%20me%20gustaría%20agendar%20mi%20evaluación%20diagnóstica%20gratuita"
+            href="https://wa.me/529999075334?text=Hola%20me%20gustaría%20agendar%20mi%20evaluación%20diagnóstica%20gratuita"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:bg-purple-600 inline-block"
