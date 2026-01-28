@@ -3,16 +3,23 @@ kind: Ingress
 metadata:
   name: academia-logika-ingress
   annotations:
-    nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-body-size: "0m"
 spec:
   ingressClassName: nginx
   rules:
     - host: academialogika.com
       http:
         paths:
-          - pathType: Prefix
-            path: /
+          - path: /_next
+            pathType: Prefix
+            backend:
+              service:
+                name: academia-logika-svc
+                port:
+                  number: 80
+
+          - path: /
+            pathType: Prefix
             backend:
               service:
                 name: academia-logika-svc
