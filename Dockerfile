@@ -35,9 +35,9 @@ ENV PORT=3000
 RUN addgroup -g 1001 nodejs \
   && adduser -S -u 1001 nextjs
 # Copia los artefactos necesarios desde la etapa de compilación
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Cambia al usuario sin privilegios antes de iniciar el servidor
 USER nextjs
 # Expone el puerto de escucha del servidor Next.js

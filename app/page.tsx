@@ -174,7 +174,7 @@ export default function Home() {
                   <span className="text-2xl mr-2" aria-hidden="true">
                     🛜
                   </span>
-                  <span className="text-lg font-medium text-gray-100">
+                  <span className="text-lg font-medium text-gray-500">
                     Modalidad 100% online
                   </span>
                 </div>
@@ -182,7 +182,7 @@ export default function Home() {
                   <span className="text-2xl mr-2" aria-hidden="true">
                     🏠
                   </span>
-                  <span className="text-lg font-medium text-gray-100">
+                  <span className="text-lg font-medium text-gray-500">
                     Aprende desde la comodidad de tu hogar
                   </span>
                 </div>
