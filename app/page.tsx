@@ -21,7 +21,7 @@ export default function Home() {
         <div className="hidden md:flex space-x-8">
           <a
             href="#metodologia"
-            className="text-gray-600 hover:text-blue-600 transition-colors flex items-center"
+            className="text-gray-600 hovr:text-blue-600 transition-colors flex items-center"
           >
             <span className="mr-1">📖</span> Metodología
           </a>
@@ -50,7 +50,7 @@ export default function Home() {
             <span className="mr-1">📞</span> Contacto
           </a>
         </div>
-        <button className="md:hidden text-gray-600">☰</button>
+        <button type="button" className="md:hidden text-gray-600">☰</button>
       </div>
     </nav>
     {/* Hero Section */}
