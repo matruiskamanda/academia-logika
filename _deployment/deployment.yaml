@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: academia-logika
+  labels:
+    app: academia-logika
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: academia-logika
+  template:
+    metadata:
+      labels:
+        app: academia-logika
+    spec:
+      containers:
+      - name: academia-logika
+        image: registry.paranoids.org/academia-logika:main
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: academia-logika-svc
+spec:
+  selector:
+    app: academia-logika
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
